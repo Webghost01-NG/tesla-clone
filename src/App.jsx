@@ -1,9 +1,8 @@
 import Header from "./components/Header"
 import Section from "./components/Section"
+import DemoDrive from "./components/DemoDrive"
+import ChatBox from "./components/ChatBox"
 import { cars } from "./data/cars"
-import Hero from "./components/Hero"  
-
-
 
 function App(){
 
@@ -13,15 +12,13 @@ return(
 
 <Header />
 
-{cars.map((car,index)=>(
-<Section key={index} {...car}/>
+{cars.map((car,i)=>(
+<Section key={i} {...car}/>
 ))}
 
-<Hero />
+<DemoDrive />
 
-{cars.map((car,index)=>(
-<Section key={index} {...car}/>
-))}
+<ChatBox />
 
 </div>
 

@@ -1,34 +1,30 @@
-function Section({title, tagline, image}){
+import useScrollFade from "../hooks/useScrollFade"
 
-return(
+function Section({ title, tagline, image }) {
+
+useScrollFade()
+
+return (
 
 <section
-className="section"
-style={{backgroundImage:`url(${image})`}}
+  className="section fade"
+  style={{ backgroundImage: `url(${image})` }}
 >
 
-<div className="section-content">
+<div className="overlay">
 
 <h1>{title}</h1>
 <p>{tagline}</p>
 
 <div className="buttons">
 
-<button className="btn-dark">
-Custom Order
-</button>
+<button className="btn-dark">Order Now</button>
 
-<button className="btn-light">
-Demo Drive
-</button>
+<button className="btn-light">Demo Drive</button>
 
 </div>
 
 </div>
-<img
-src="/images/down-arrow.svg"
-className="down-arrow"
-/>
 
 </section>
 
